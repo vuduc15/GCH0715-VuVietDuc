@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+
+<style>
+    body{
+        background-image: url("/images/5.jpg");
+        background-size: cover;
+  		
+    }
+</style>
+
+<body>
+    <h1 align="center"> ADMIN CONTROL CENTER</h1>
+    <button><a href="/insert">New Product</a></button>
+    <button><a href="/">Home Page</a></button>
+    <form action="/Research" method="get">
+        Search: <input type="text" name="txtName" id="" placeholder="Enter your name...">
+        <input type="submit" value="Research">
+    </form>
+    <table class="table table-hover" border="2">
+        <tr align="center">
+            <td>Id</td>
+            <td>Name</td>
+            <td>Type</td>
+            <td>Price(VND)</td>
+            <td>Delete</td>
+        </tr>
+        {{#each model}}
+        <tr align="center">
+            <td>{{_id}}</td>
+            <td>{{name}}</td>
+            <td>{{type}}</td>
+            <td>{{price}}</td>
+            <td><a href="/remove?id={{_id}}">Delete</a></td>
+        </tr>
+        {{/each}}
+    </table>
+</body>
+
+</html>

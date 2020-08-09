@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+
+<style>
+    input[type=text],
+    textarea {
+        width: 300%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+    }
+
+    body {
+        background-image: url("/images/3.jpg");
+        background-size: cover;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1 align="center">ADD PRODUCT</h1>
+        <table style="margin-left: 180px; margin-top: 150px;">
+            <form action="doInsert" method="POST">
+                <tr>
+                    <td colspan="2" align="center"></td>
+                </tr>
+                <tr>
+                    <td style="color: snow;">Product Name</td>
+                    <td><input type="text" name="txtName" required></td>
+                </tr>
+                <tr>
+                    <td style="color: snow;">Product Type</td>
+                    <td><input type="text" name="txtType"></td>
+                </tr>
+                <tr>
+                    <td style="color: snow;">Product Price (VND) </td>
+                    <td><input type="text" name="txtPrice"></td>
+                </tr>
+                <tr>
+                    <br>
+                    <td align="center"><input type="submit" value="Add Product"></td>
+                </tr>
+            </form>
+        </table>
+    </div>
+</body>
+
+</html>
